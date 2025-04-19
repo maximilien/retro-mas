@@ -1,33 +1,12 @@
-,,,,,,,,,
-Went well,Votes,Went OK,Votes,To Improve,Votes,Action Items,Votes,,
-"PQCP delivery of mlkem verified implementation
----
-Collaboration between OQS and PQCP",7,Broader participation - more companies since when we started,3,"Need to reach-out to more people for adding more contributors and maintainers.
----
-Need more marketing communications: blogs, tweets, LinkedIn. 
-
-There are some but more is needed",10,"Ask at the board ,meetings to encourage member companies to participate in working groups.
----
+Went well,Votes Went well,Went OK,Votes Went OK,To Improve,Votes To Improve,Action Items,Votes Action Items,,
+PQCP delivery of mlkem verified implementation. Collaboration between OQS and PQCP,7,Broader participation - more companies since when we started,3,"Need to reach-out to more people for adding more contributors and maintainers. Need more marketing communications: blogs, tweets, LinkedIn. There are some but more is needed",10,"Ask at the board ,meetings to encourage member companies to participate in working groups.
 Specifically ask for talent from the member companies",3,,
-The blog post for the one year anniversary,4,"attracted collab from telco org - didn't adopt code, but worthwhile for all",2,more companies involved in PQCA but not collaborating in meetings/issues?,5,"Create a LinkedIn page
-
-What should we do about other social media: X, BlueSky?",2,,
-Contributing to RWPQC and collaborating with MITRE and SandboxAQ.,3,Minutes taking for the TAC. We started doing with with Github but stopped when we changed LF facilitator,2,Deal with disgruntled contributors early and fast.,5,"More marketing is needed to reach out. 
-
-Outreach committee started and that should help.",2,,
+The blog post for the one year anniversary,4,"attracted collab from telco org - didn't adopt code, but worthwhile for all",2,more companies involved in PQCA but not collaborating in meetings/issues?,5,"Create a LinkedIn page. What should we do about other social media: X, BlueSky?",2,,
+Contributing to RWPQC and collaborating with MITRE and SandboxAQ.,3,Minutes taking for the TAC. We started doing with with Github but stopped when we changed LF facilitator,2,Deal with disgruntled contributors early and fast.,5,More marketing is needed to reach out. Outreach committee started and that should help.,2,,
 Hosting happy hour in San Jose,1,,,Linkedin Page for PQCA? (where we can attach blogs links and announcements and other people can repost it),4,Collaborative blog posts,2,,
 funding for arm runners,1,,,"longrunning discussion on what production means (pqca tac & oqs)
----
-Communications between diffferent working groups. The TAC is good place but it’s every two weeks",4,"Could different meeting times help increase participation. Perhaps rotating times or having two meetings?
-
-PQCP and OQS do this.",1,,
-new tools working group set-up,0,,,Where is Google?,3,"Perhaps refine and certainly code of conduct fast. We inherit the LF CoC but can expand it if needed.
-
-Encourage folks to report CoC violations.
-
-There is a process to report and it is anonymous.
-
-Add guidelines to enforce.",1,,
+Communications between diffferent working groups. The TAC is good place but it’s every two weeks",4,Could different meeting times help increase participation. Perhaps rotating times or having two meetings? PQCP and OQS do this.,1,,
+new tools working group set-up,0,,,Where is Google?,3,Perhaps refine and certainly code of conduct fast. We inherit the LF CoC but can expand it if needed. Encourage folks to report CoC violations. There is a process to report and it is anonymous. Add guidelines to enforce.,1,,
 created lifecycle policy.,0,,,oqs/pqcp mlkem wasn't adopted for openssl :-(,3,Use LFX more and especially the data and graphs,1,,
 automation of github repo access (bitwarden),0,,,contributor growth slow,2,Dedicated team for creating and moving MLKEM to OQS. That helped and especially every two weeks discussions.,0,,
 ,,,,Communication with project TSCs,2,,,,

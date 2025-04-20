@@ -6,7 +6,7 @@ This was first created during Smol hackathon April 2025 in San Francisco, CA. Ev
 
 # Problem
 
-Retrospective are a means of capturing what went well, what went OK, and what needs improvements after a period of team activity. This is usually done on a weekly basis for agile teams. See [retrospective best practices]() as a good place for the theory and practice.
+Retrospective are a means of capturing what went well, what went OK, and what needs improvements after a period of team activity. This is usually done on a weekly basis for agile teams. See [retrospective best practices](https://www.easyagile.com/best-practice/retrospective-best-practice) as a good place for the theory and practice.
 
 Tools like [EasyRetro](easyretro.io) do a great job of facilitating running retrospective.
 
@@ -54,7 +54,7 @@ Enter the name of the output blog: blog.md
 
 # Architecture
 
-The architecture uses a team of [smol]() agents to collect data for each of the categories: 'Went well', 'Went OK', and 'To Improve' along with the votes for the entries.
+The architecture uses a team of [smol](https://github.com/huggingface/smolagents) agents to collect data for each of the categories: 'Went well', 'Went OK', and 'To Improve' along with the votes for the entries.
 
 The collected 'Went well', 'Went OK', and 'To Improve' and votes is then summarize by a 'summary' agent which then passes the resul to a 'writer' agent which creates a draft post with the data. The draft is then pass to an 'editor' agent which cleans up and creates the final version of the blog post in markdown.
 
@@ -78,5 +78,17 @@ flowchart LR
     editor --> blog_md@{shape: doc, label: "blog.md"}
 ```
 
-
 # Next steps
+
+The following are potential next steps:
+
+1. Load data from EasyRetro to CSV. Potentially via Web scrapping, API, etc. JigsawStack seems to have a good solution but could not get pass the loging issue with EasyRetro
+2. Create CSV from GH retros using labels: `went_well`, `went_ok`, and `to_improve`
+3. Create GH issues using the `To Improve` section of the generated blog
+
+# References
+
+- Retrospective
+- Smol agents
+- CSV parsing
+- GH API

@@ -129,21 +129,21 @@ class RetroMas:
             tools=[FileReader()],
             model=self.model,
             managed_agents=[self.went_well_agent, self.went_ok_agent, self.to_improve_agent, self.action_items_agent, self.summary_agent, self.writer_agent, self.editor_agent],
-            additional_authorized_imports=["re", "csv", "json"],
+            additional_authorized_imports=["re", "csv", "json", "pandas", "numpy"],
 
             description="""You are a retro manager. Coordinate between went_well, went_ok, to_improve, summary, writer, and editor teams.
             Follow these steps:
-            1. Use went_well to gather 'Went well' data and 'Went well votes' as went_well_data
-            2. Use went_ok to gather 'Went ok' and 'Went OK votes' as went_ok_data
-            3. Use to_improve to gather 'To Improve' and 'To Improve votes' as to_improve_data
-            4. Use action_items to gather 'Action items' and 'Action items votes' as action_items_data
+            1. Use went_well to gather 'Went well' data and 'Votes Went well' as went_well_data
+            2. Use went_ok to gather 'Went OK' and 'Votes Went OK' as went_ok_data
+            3. Use to_improve to gather 'To Improve' and 'Votes To Improve' as to_improve_data
+            4. Use action_items to gather 'Action items' and 'Votes Action items' as action_items_data
             5. Pass went_well_data to summary to create went_well_summary
             6. Pass went_ok_data to summary to create went_ok_summary
-            8. Pass to_improve_data to summary to create to_improve_summary
-            9. Pass action_items_data to summary to create action_items_summary
-            10. Pass went_well_summary, went_ok_summary, to_improve_summary, and action_items_summary to writer to create a blog post as draft
-            11. Send draft to editor for final polish
-            12. Save the final markdown file
+            7. Pass to_improve_data to summary to create to_improve_summary
+            8. Pass action_items_data to summary to create action_items_summary
+            9. Pass went_well_summary, went_ok_summary, to_improve_summary, and action_items_summary to writer to create a blog post as draft
+            10. Send draft to editor for final polish formatted as markdown
+            11. Save the formatted markdown as a file and make sure it's only the markdown content
             """
         )
 

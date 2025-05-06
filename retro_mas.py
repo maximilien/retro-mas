@@ -96,6 +96,13 @@ class RetroMas:
             description=f"list all rows in 'To improve' with corresponding 'Votes To improve' columns",
         )
 
+        self.action_items_agent = CodeAgent(
+            name="action_items",
+            tools=[FileReader()],
+            model = self.model,
+            description=f"list all rows in 'Action items' with corresponding 'Votes Action items' columns",
+        )
+
         self.summary_agent = CodeAgent(
             name="summary",
             tools=[],
@@ -121,7 +128,7 @@ class RetroMas:
         self.retro_manager = CodeAgent(
             tools=[FileReader()],
             model=self.model,
-            managed_agents=[self.went_well_agent, self.went_ok_agent, self.to_improve_agent, self.summary_agent, self.writer_agent, self.editor_agent],
+            managed_agents=[self.went_well_agent, self.went_ok_agent, self.to_improve_agent, self.action_items_agent, self.summary_agent, self.writer_agent, self.editor_agent],
             additional_authorized_imports=["re", "csv", "json"],
 
             description="""You are a retro manager. Coordinate between went_well, went_ok, to_improve, summary, writer, and editor teams.
@@ -129,12 +136,14 @@ class RetroMas:
             1. Use went_well to gather 'Went well' data and 'Went well votes' as went_well_data
             2. Use went_ok to gather 'Went ok' and 'Went OK votes' as went_ok_data
             3. Use to_improve to gather 'To Improve' and 'To Improve votes' as to_improve_data
-            4. Pass went_well_data to summary to create went_well_summary
-            5. Pass went_ok_data to summary to create went_ok_summary
-            6. Pass to_improve_data to summary to create to_improve_summary
-            7. Pass went_well_summary, went_ok_summary, and to_improve_summary to writer to create a blog post as draft
-            8. Send draft to editor for final polish
-            9. Save the final markdown file
+            4. Use action_items to gather 'Action items' and 'Action items votes' as action_items_data
+            5. Pass went_well_data to summary to create went_well_summary
+            6. Pass went_ok_data to summary to create went_ok_summary
+            8. Pass to_improve_data to summary to create to_improve_summary
+            9. Pass action_items_data to summary to create action_items_summary
+            10. Pass went_well_summary, went_ok_summary, to_improve_summary, and action_items_summary to writer to create a blog post as draft
+            11. Send draft to editor for final polish
+            12. Save the final markdown file
             """
         )
 
@@ -147,7 +156,7 @@ class RetroMas:
             output_file (str): The filename to save the markdown post
         """
         result = self.retro_manager.run(f"""Create a summary of the retro in file: {self.data_path}
-        1. First, get the went_well, went_ok, and to_improve data
+        1. First, get the went_well, went_ok, to_improve, and action_items data
         2. Then, write an engaging summary of each
         3. Finally, edit and polish the content
         """)

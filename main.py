@@ -20,14 +20,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import sys
 from retro_mas import RetroMas
 
 def main():
-    print("Welcome to Retro MAS")
-    input_data_path = input("Enter the CSV for your retro data: ")
-    retro_blog_file = input("Enter the name of the output blog: ")
-    answer = RetroMas(input_data_path, retro_blog_file).retro_summary()
-    print(answer)
+    if len(sys.argv) == 1:
+        print("Welcome to Retro MAS")
+        input_data_path = input("Enter the CSV for your retro data: ")
+        retro_blog_file = input("Enter the name of the output blog: ")
+        answer = RetroMas(input_data_path, retro_blog_file).retro_summary()
+        print(answer)
+    else:
+        answer = RetroMas(sys.argv[1], sys.argv[2]).retro_summary()
+        print(answer)
 
 if __name__ == "__main__":
     main()
